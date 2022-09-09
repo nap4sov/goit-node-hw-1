@@ -42,4 +42,12 @@ function invokeAction({ action, id, name, email, phone }) {
     }
 }
 
-invokeAction(argv);
+const start = async argv => {
+    try {
+        invokeAction(argv);
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+start(argv);
